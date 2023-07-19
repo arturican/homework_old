@@ -1,0 +1,55 @@
+.message {
+    display: flex;
+    width: 800px;
+    flex-direction: column;
+    gap: 10px;
+    margin: auto;
+}
+
+.imageAndText {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 10px;
+    border-radius: 8px;
+    max-width: 80%;
+    align-self: flex-end;
+}
+
+
+
+.imageAndText img {
+    width: 50px;
+    margin-left: 50px;
+
+
+
+}
+
+.text {
+    background-color: #0066cc;
+    color: white;
+    border-radius: 8px;
+
+
+
+}
+
+.text:after {
+
+}
+
+.name {
+   color: black;
+    justify-items: flex-start;
+
+}
+
+.messageText {
+    background-color: #00cc22;
+    max-width: 80%;
+    margin: 5px;
+}
+
+.time {
+    align-self: flex-end;
+}
