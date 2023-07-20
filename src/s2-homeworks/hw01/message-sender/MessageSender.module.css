@@ -1,18 +1,41 @@
 .sendForm {
+    display: flex;
+    flex-direction: row;
+    max-width: 90%;
+    margin-top: 10em;
+
+
 
 }
 
 .textarea {
+    width: 60%;
+    box-sizing: border-box;
+    border-bottom: 2px solid gainsboro;
+    border-radius: 10px;
+    background-color: #f8f8f8;
+    font-size: 26px;
+    resize: none;
+    margin-left: 9em;
+    min-width: 500px;
 
 }
 
 .button {
+    background: #0066cc;
+    padding: 0.5em;
+    color: #FFFFFF;
+    border-radius: 1em;
+    width: 7em;
+    font-size: larger;
+    margin-left: auto;
 
 }
 
 .button:hover {
 
 }
+
 .button:active {
 
 }
