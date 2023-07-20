@@ -1,36 +1,36 @@
 .message {
     display: flex;
-    width: 800px;
     flex-direction: column;
-    gap: 10px;
+    max-width: 80%;
     margin: auto;
+    font-size: larger;
+    overflow-x: hidden;
 }
 
 .imageAndText {
     display: flex;
     flex-direction: row-reverse;
-    padding: 10px;
-    border-radius: 8px;
-    max-width: 80%;
-    align-self: flex-end;
-}
+    justify-items: flex-end;
 
+
+}
 
 
 .imageAndText img {
-    width: 50px;
-    margin-left: 50px;
-
-
-
+    width: 100px;
+    height: 100px;
+    margin-left: 2%;
 }
 
 .text {
-    background-color: #0066cc;
-    color: white;
-    border-radius: 8px;
-
-
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    color: #FFFFFF;
+    background: #0066cc;
+    padding: 1em;
+    font-family: Tahoma;
+    border-radius: 1em;
 
 }
 
@@ -39,17 +39,20 @@
 }
 
 .name {
-   color: black;
-    justify-items: flex-start;
+    align-self: flex-end;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+
 
 }
 
 .messageText {
-    background-color: #00cc22;
-    max-width: 80%;
-    margin: 5px;
+    padding: 0.1em;
 }
 
 .time {
     align-self: flex-end;
+    margin-right: 1.5em;
+    font-weight: bold;
+
 }

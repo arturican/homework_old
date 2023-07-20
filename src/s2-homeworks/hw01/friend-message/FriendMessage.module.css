@@ -1,17 +1,33 @@
 .friendMessage {
-
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+    margin: auto;
+    font-size: larger;
+    overflow-x: hidden;
 }
 
 .friendImageAndText {
-
+    display: flex;
+    flex-direction: row;
+    justify-items: flex-end;
 }
 
 .friendImageAndText img {
-
+    width: 100px;
+    height: 100px;
+    margin-right: 2%;
 }
 
 .friendText {
-
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    color: black;
+    padding: 1em;
+    font-family: Tahoma;
+    border-radius: 1em;
+    border: 1px solid gainsboro;
 }
 
 .friendText:after {
@@ -19,13 +35,17 @@
 }
 
 .friendName {
-
+    align-self: flex-start;
+    padding: 0.5em;
+    font-weight: bold;
 }
 
 .friendMessageText {
-
+    padding: 0.1em
 }
 
 .friendTime {
-
+    align-self: flex-start;
+    margin-left: 1.5em;
+    font-weight: bold;
 }
