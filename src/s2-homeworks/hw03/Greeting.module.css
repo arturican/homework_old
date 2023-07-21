@@ -1,5 +1,5 @@
 .greetingForm {
-   margin-top: 10px;
+   margin: 20px;
 }
 
 .inputAndButtonContainer {
@@ -13,13 +13,19 @@
 
 .input {
     width: auto;
+    border: black solid 2px;
+    border-radius: 5px;
+
 }
 
 .input:focus {
+    border: black solid 2px;
+    border-radius: 5px;
 }
 
 .errorInput {
-    border: #cc0000 solid 1px;
+    border: #cc0000 solid 2px;
+    border-radius: 5px;
 }
 
 .button {
@@ -27,6 +33,7 @@
     background: #0066cc;
     width: 50px;
     border-radius: 5px;
+    color: white;
 }
 
 .button:focus {
