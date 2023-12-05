@@ -1,28 +1,43 @@
 .sendForm {
-  font-family: Montserrat;
-  font-size: 16px;
-
-
+    font-family: 'Montserrat', sans-serif;  /* Добавлено значение font-family с одинарными кавычками и generic font */
+    font-size: 16px;
+    margin: 0 auto;  /* Заменено margin-left и margin-right на более краткую форму */
+    height: 40px;
 }
+
 
 .textarea {
+ /* Использование относительной ширины */
+    width: 976px;
+    box-sizing: border-box; /* Учесть padding и border в общей ширине элемента */
+    height: 200px; /* Высота по умолчанию (можно настроить по желанию) */
+    padding: 10px; /* Поля вокруг текстовой области */
+    border-radius: 10px; /* Скругление углов */
+    font-size: 16px; /* Размер шрифта */
+    resize: none;
+    background: #F5F7FB;
 
 }
+
 
 .button {
-  width: 120px;
-  height: 40px;
-  top: 432px;
-  left: 1090px;
-  border-radius: 20px;
-  background: #0066cc;
-  color: #FFFFFF;
-
+    width: 120px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #0066cc;  /* Использование background-color вместо background */
+    color: #FFFFFF;
+    margin-left: 15px;
+    font-weight: bold;  /* Заменено bolder на bold */
+    font-family: 'Montserrat', sans-serif;
+    position: relative;  /* Добавлен position: relative; для использования top и left */
+    vertical-align: top;
 }
-
 .button:hover {
-
+    /* Добавлены стили для состояния hover */
+    background-color: #004080;
 }
 .button:active {
-
+    /* Добавлены стили для состояния active */
+    background-color: #003366;
 }
+

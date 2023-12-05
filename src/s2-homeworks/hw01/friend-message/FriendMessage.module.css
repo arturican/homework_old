@@ -1,5 +1,5 @@
 .friendMessage {
-
+    position: relative;
 }
 
 .friendImageAndText {
@@ -8,26 +8,40 @@
 }
 
 .friendImageAndText img {
+    margin: 10px;
     height: 48px;
     width: 48px;
 }
 
 .friendText {
-
+    position: relative;
+    background: #F5F7FB;
+    padding: 10px;
+    border-radius: 5px;
 }
 
-.friendText:after {
-
+.friendText:before {
+    content: '';
+    position: absolute;
+    top: 250%;
+    left: -10px;
+    border-width: 8px 15px 8px 0;
+    border-color: transparent #F5F7FB transparent transparent;
+    border-style: solid;
+    transform: translateY(-750%);
 }
 
 .friendName {
-
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .friendMessageText {
-
+    /* Здесь могут быть стили для .friendMessageText */
 }
 
 .friendTime {
-
+    margin-left: 15px;
+    font-weight: bold;
 }
+
