@@ -1,37 +1,16 @@
 .message {
-    display: flex;
-    flex-direction: column;
-    max-width: 80%;
-    margin: auto;
-    font-size: larger;
-    overflow-x: hidden;
+
 }
 
 .imageAndText {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-items: flex-end;
-
 
 }
 
-
 .imageAndText img {
-    width: 100px;
-    height: 100px;
-    margin-left: 2%;
+
 }
 
 .text {
-    display: flex;
-    flex-direction: column;
-    overflow-x: hidden;
-    color: #FFFFFF;
-    background: #0066cc;
-    padding: 1em;
-    font-family: Tahoma;
-    font-size: 26px;
-    border-radius: 1em;
 
 }
 
@@ -40,20 +19,13 @@
 }
 
 .name {
-    align-self: flex-end;
-    font-weight: bold;
-    margin-bottom: 0.5em;
-
 
 }
 
 .messageText {
-    padding: 0.1em;
+
 }
 
 .time {
-    align-self: flex-end;
-    margin-right: 1.5em;
-    font-weight: bold;
 
 }
