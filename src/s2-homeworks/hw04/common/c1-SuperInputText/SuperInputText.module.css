@@ -1,20 +1,29 @@
-.input:focus {
+.inputWrapper {
+    /* Style for the wrapper of input and error message */
+    display: flex;
+    flex-direction: column;
 }
 
 .input {
-}
-
-.inputWrapper {
+    /* Base style for input */
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    padding: 8px 12px;
+    margin-bottom: 5px;
 }
 
 .superInput {
+    /* Additional styles for input when there is no error */
 }
 
 .errorInput {
-}
-
-.errorInput:focus {
+    /* Style for input when there is an error */
+    border-color: #cc0000;
 }
 
 .error {
+    /* Style for the error message */
+    color: #cc0000;
+    font-size: 0.875em;
 }
+
