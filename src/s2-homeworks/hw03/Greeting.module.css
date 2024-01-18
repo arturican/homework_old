@@ -1,55 +1,89 @@
+/* Style for the greeting form container */
 .greetingForm {
-
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 20px auto;
 }
 
+/* Container for the input and button */
 .inputAndButtonContainer {
     display: flex;
-    width: 200px;
-    box-sizing: border-box;
     gap: 10px;
-
+    margin-top: 10px;
 }
 
+/* Style for error messages */
 .error {
-    color: red;
+    color: #ff0000;
+    font-size: 0.8em;
+    margin-top: 5px;
 }
 
+/* General input field style */
 .input {
-    padding: 10px;
-    border: solid 1px gray;
-    background: #00cc22;
+        border: 1px solid #cccccc;
+        border-radius: 4px;
+        padding: 10px;
+        width: 350px; /* Fixed width of the input field */
+        height: 40px; /* Fixed height of the input field */
+        box-sizing: border-box; /* Include padding and border in the element's total dimensions */
+
 }
 
+/* Input field focus state */
 .input:focus {
-
+    border-color: #007bff;
+    outline: none;
 }
 
+/* Input field style when there's an error */
 .errorInput {
-    border: solid 2px red;
+    border-color: #ff0000;
 }
 
+/* General button styling */
 .button {
-    background: #0066cc;
-    color: #FFFFFF;
-    padding: 10px 20px 10px 20px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.2s;
+    white-space: nowrap;
 }
 
+/* Button focus state */
 .button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5);
 }
 
+/* Button active state */
 .button:active {
+    background-color: #0056b3;
 }
 
+/* Button disabled state */
 .button:disabled {
-    opacity: 0.5;
+    background-color: #cccccc;
+    cursor: not-allowed;
 }
 
+/* Style for the text displaying the number of people added */
 .text {
-    font-size: 25px;
-    opacity: 0.5;
-    color: gray;
+    font-size: 1em;
+    color: #333;
 }
 
+/* Style for the greeting message */
 .greeting {
-
+    color: #333;
+    margin-top: 15px;
+    font-size: 1.2em;
 }
