@@ -22,7 +22,7 @@ const SuperButton: React.FC<SuperButtonPropsType> = (
             ' ' + s.disabled
             : xType === 'red' ?
                 ' ' +s.red
-                : ' '+s.default )
+                : xType === 'secondary' ? ' ' + s.secondary : ' ' + s.default)
         // + (disabled
         //         ? ...
         //         : xType === 'red'
