@@ -1,15 +1,28 @@
 .radio {
+   display: flex;
+    flex-direction: column;
 }
 
 .radio::before {
+    background: black;
 }
 
 
 .radio:checked::before {
+    background: black;
 }
 
 .label {
+    padding: 5px;
+    display: flex;
+    gap: 10px;
 }
 
 .options {
+
+}
+
+.input[type='radio'] {
+    /* Пример изменения внешнего вида радио кнопки */
+    accent-color: black; /* Изменяет цвет радио кнопки в новых браузерах */
 }

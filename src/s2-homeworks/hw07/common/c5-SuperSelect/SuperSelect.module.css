@@ -1,9 +1,14 @@
 .select {
+    background-color: black;
+    padding: 5px;
+    color: white;
 }
 
 .select:focus {
+    background-color: black;
 }
 
 
 .option:hover {
+    background-color: black;
 }
