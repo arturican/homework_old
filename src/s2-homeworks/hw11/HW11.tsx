@@ -39,6 +39,7 @@ function HW11() {
                             id={'hw11-single-slider'}
                             // сделать так чтоб value1 изменялось // пишет студент
                             onChange={change}
+                            value={value1}
 
                         />
                     </div>
