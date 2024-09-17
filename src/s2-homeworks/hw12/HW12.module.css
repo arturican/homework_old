@@ -19,5 +19,7 @@ html {
 }
 
 .select {
-
+    width: 171px;
+    background-color: var(--background);
+    color: var(--color);
 }
