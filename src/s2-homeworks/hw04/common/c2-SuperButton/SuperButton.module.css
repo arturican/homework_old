@@ -1,6 +1,6 @@
 .button {
     /* Base style for all buttons */
-    padding: 10px 20px;
+    padding: 5px;
     border-radius: 4px;
     border: none;
     cursor: pointer;
@@ -22,8 +22,15 @@
 
 .secondary {
     /* Style for secondary button type */
-    background-color: #f0f0f0;
-    border: 1px solid #cccccc;
+    border: 1px solid #0066CC;
+    background-color: white;
+    color: #0066CC;
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    width: 117px;
+    text-align: center;
 }
 
 .red {
