@@ -16,14 +16,20 @@ const SuperPagination: React.FC<SuperPaginationPropsType> = (
         page, itemsCountForPage, totalCount, onChange, id = 'hw15',
     }
 ) => {
-    const lastPage = 10 // пишет студент // вычислить количество страниц
+    const lastPage = Math.max(1, Math.ceil(totalCount / Math.max(1, itemsCountForPage)))
 
-    const onChangeCallback = (event: any, page: number) => {
-        // пишет студент
+    const onChangeCallback = (_event: React.ChangeEvent<unknown>, newPage: number) => {
+        onChange(newPage, itemsCountForPage)
     }
 
-    const onChangeSelect = (event: any) => {
-        // пишет студент
+    const onChangeSelect = (event: React.ChangeEvent<HTMLSelectElement>) => {
+        const newCount = Number(event.target.value)
+        onChange(1, newCount)
+    }
+
+    const onChangeSelectOption = (option: number | string) => {
+        const newCount = Number(option)
+        onChange(1, newCount)
     }
 
     return (
@@ -31,18 +37,18 @@ const SuperPagination: React.FC<SuperPaginationPropsType> = (
             <Pagination
                 id={id + '-pagination'}
                 sx={{
-                    // стили для Pagination // пишет студент
+                    '.MuiPagination-ul': { justifyContent: 'center' },
+                    '.MuiPaginationItem-root': { borderRadius: '8px' },
+                    mb: 1,
                 }}
-                page={page}
+                page={Math.min(page, lastPage)}
                 count={lastPage}
                 onChange={onChangeCallback}
                 hideNextButton
                 hidePrevButton
             />
 
-            <span className={s.text1}>
-                показать
-            </span>
+            <span className={s.text1}>показать</span>
 
             <SuperSelect
                 id={id + '-pagination-select'}
@@ -53,11 +59,10 @@ const SuperPagination: React.FC<SuperPaginationPropsType> = (
                     {id: 10, value: 10},
                 ]}
                 onChange={onChangeSelect}
+                onChangeOption={onChangeSelectOption}
             />
 
-            <span className={s.text2}>
-                строк в таблице
-            </span>
+            <span className={s.text2}>строк в таблице</span>
         </div>
     )
 }
