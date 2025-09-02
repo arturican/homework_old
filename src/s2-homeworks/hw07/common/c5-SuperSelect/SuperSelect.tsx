@@ -10,11 +10,9 @@ type DefaultSelectPropsType = DetailedHTMLProps<
     HTMLSelectElement
 >
 
-export type SelectOption = { id: number | string; value: number | string }
-
 type SuperSelectPropsType = DefaultSelectPropsType & {
-    options?: SelectOption[]
-    onChangeOption?: (option: number | string) => void
+    options?: any[]
+    onChangeOption?: (option: any) => void   // ← максимально совместимо
 }
 
 const SuperSelect: React.FC<SuperSelectPropsType> = ({
@@ -24,22 +22,28 @@ const SuperSelect: React.FC<SuperSelectPropsType> = ({
                                                          onChangeOption,
                                                          ...restProps
                                                      }) => {
-    const mappedOptions = (options ?? []).map((o) => (
-        <option
-            id={'hw7-option-' + o.id}
-            className={s.option}
-            key={o.id}
-            value={o.id}
-        >
-            {o.value}
-        </option>
-    ))
+    const mappedOptions: any[] = options
+        ? options.map((o) => (
+            <option
+                id={'hw7-option-' + o.id}
+                className={s.option}
+                key={o.id}
+                value={o.id}
+            >
+                {o.value}
+            </option>
+        ))
+        : []
 
     const onChangeCallback = (e: ChangeEvent<HTMLSelectElement>) => {
-        onChange?.(e) // пробрасываем DOM-событие
+        // 1) Пробрасываем DOM-событие наверх, если передали onChange
+        onChange?.(e)
+
+        // 2) И дополнительно — "готовое" значение
         const raw = e.currentTarget.value
-        const num = Number(raw)
-        onChangeOption?.(Number.isNaN(num) ? raw : num) // и готовое значение
+        const asNumber = Number(raw)
+        const parsed = Number.isNaN(asNumber) ? raw : asNumber
+        onChangeOption?.(parsed)
     }
 
     const finalSelectClassName = s.select + (className ? ' ' + className : '')
